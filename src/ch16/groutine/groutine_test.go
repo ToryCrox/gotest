@@ -1,16 +1,17 @@
 package groutine_test
 
 import (
-	"time"
 	"fmt"
 	"testing"
+	"time"
 )
 
-func TestGroutine(t *testing.T){
-	for  i := 0; i < 10; i++ {
-		go func(i int){
+func TestGroutine(t *testing.T) {
+	for i := 0; i < 10; i++ {
+		go func(i int) {
 			fmt.Println(i)
 		}(i)
 	}
 	time.Sleep(time.Millisecond * 50)
+	fmt.Println(time.Now().UnixMilli())
 }

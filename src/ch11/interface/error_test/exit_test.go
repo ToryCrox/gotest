@@ -6,9 +6,8 @@ import (
 	"testing"
 )
 
-
-func TestExit(t *testing.T){
-	defer func(){
+func TestExit(t *testing.T) {
+	defer func() {
 		if err := recover(); err != nil {
 			fmt.Println("recoverd from", err)
 		}
